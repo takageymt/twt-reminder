@@ -32,3 +32,11 @@ and the user_id.
 ```javascript
 var bot_id = 'BOT_USER_ID';
 ```
+
+Usage
+===
+
+Execute:
+
+    $ node bot.js
+    
