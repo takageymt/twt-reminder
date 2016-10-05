@@ -27,8 +27,8 @@ var bot = new twitter({
 });
 ```
 
-and
+and the user_id.
 
 ```javascript
-var bot_id = 'BOT_ID';
+var bot_id = 'BOT_USER_ID';
 ```

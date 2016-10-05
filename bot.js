@@ -12,8 +12,8 @@ var bot = new twitter({
     access_token_key:'ACCESS_TOKEN_KEY',
     access_token_secret:'ACCESS_TOKEN_SECRET'
 });
-var bot_id = 'BOT_ID';
-var bot_name = '@BOT_NAME';
+var bot_id = 'BOT_USER_ID';
+var bot_name = '@BOT_SCREEN_NAME';
 var lastTime = new Date();
 var firstBoot = true;
 
