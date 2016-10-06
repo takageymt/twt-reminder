@@ -7,6 +7,7 @@ Requirements
 ===
 
 - node.js
+- twitter for node.js
 - some node_modules
 
 Preparation
