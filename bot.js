@@ -67,8 +67,8 @@ OthDate.prototype.isNULL = function()
 
 function setSchedule(username, id, quoteurl, date)
 {
-    var message1 = '承りました。後でお伝えいたします。';
-    var message2 = 'ご予定が入っております。';
+    var message1 = ' 承りました。後でお伝えいたします。';
+    var message2 = ' ご予定が入っております。';
     
     bot.post('statuses/update', {
 	status: username + message1 + quoteurl,
@@ -93,8 +93,8 @@ function replySchedules(username, id)
 {
     var rs = fs.ReadStream(logfile);
     var ri = rl.createInterface({'input': rs, 'output': {}});
-    var message1 = '以下のご予定を存じております。\n';
-    var message2 = 'ご予定は言付かっておりません。\n';
+    var message1 = ' 以下のご予定を存じております。\n';
+    var message2 = ' ご予定は言付かっておりません。\n';
     var note = "";
     ri.on('line', function(line) {
 	var logdata = line.trim().split(" ");
