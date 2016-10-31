@@ -1,10 +1,10 @@
 // requirements
-var twitter = require('twitter');
+var twitter  = require('twitter');
 var schedule = require('node-schedule');
-var cron = require('node-cron');
-var async = require('async');
-var fs = require('fs');
-var rl = require('readline');
+var cron     = require('node-cron');
+var async    = require('async');
+var fs       = require('fs');
+var rl       = require('readline');
 
 // log file
 var logfile = 'schedule.log';
@@ -67,8 +67,8 @@ OthDate.prototype.isNULL = function()
 
 function setSchedule(username, id, quoteurl, date)
 {
-    var message1 = ' 承りました。後でお伝えいたします。';
-    var message2 = ' ご予定が入っております。';
+    var message1 = ' Register\n';
+    var message2 = ' Notify\n';
     
     bot.post('statuses/update', {
 	status: username + message1 + quoteurl,
@@ -93,8 +93,8 @@ function replySchedules(username, id)
 {
     var rs = fs.ReadStream(logfile);
     var ri = rl.createInterface({'input': rs, 'output': {}});
-    var message1 = ' 以下のご予定を存じております。\n';
-    var message2 = ' ご予定は言付かっておりません。\n';
+    var message1 = ' List up\n';
+    var message2 = ' Not Found\n';
     var note = "";
     ri.on('line', function(line) {
 	var logdata = line.trim().split(" ");
